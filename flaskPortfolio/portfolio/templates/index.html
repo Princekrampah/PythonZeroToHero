@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MePortfolio</title>
+
+    <!-- add the Tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom css -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="relative container mx-auto p-6">
+      <!-- flex container -->
+      <div class="flex item-center justify-between">
+        <!-- logo -->
+        <div class="pt-2">
+          <img src="{{ url_for('static', filename='main.js') }}" alt="" />
+        </div>
+        <!-- Menu Items -->
+        <!-- space-x-* is the space btn the a tags -->
+        <!-- by default is mobile first hence hidden on screen size change -->
+        <!-- its the md:flex for md and above sizes -->
+        <div class="hidden md:flex space-x-6">
+          <a href="#skillset" class="hover:text-gray-500">Skillset</a>
+          <a href="#projects" class="hover:text-gray-500">Projects</a>
+          <a href="#cta" class="hover:text-gray-500">Contact</a>
+        </div>
+        <!-- Button -->
+        <a
+          href="#"
+          class="hidden md:block p-3 px-6 pt-2 text-white bg-red-500 rounded-full baseline hover:bg-red-900"
+          >Contact Me</a
+        >
+
+        <!-- Hamburger Menu -->
+        <button
+          id="menu-btn"
+          class="block hamburger md:hidden outline-none focus:outline-none"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="md:hidden">
+        <div
+          id="menu"
+          class="absolute flex-col items-center self-end hidden py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+        >
+          <a href="#skillset">Skillset</a>
+          <a href="#projects">Projects</a>
+          <a href="#cta">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Hero Section -->
+    <section id="hero">
+      <div
+        class="container flex flex-col-reverse md:flex-row item-center px-6 mx-auto mt-10 space-y-0 md:space-y-0"
+      >
+        <!-- Left Item -->
+        <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+          <h1
+            class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left"
+          >
+            Hey there, am John
+          </h1>
+          <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam
+            facilis inventore ea ab aliquid aut reiciendis qui maxime fugit
+            laboriosam.
+          </p>
+          <div class="flex justify-center md:justify-start">
+            <!-- Button -->
+            <a
+              href="#"
+              class="hidden md:block p-3 px-6 pt-2 text-white bg-red-500 rounded-full baseline hover:bg-red-900"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+        <!-- Right Item -->
+        <div class="md:w-1/2">
+          <img
+            src="{{ url_for('static', filename='images/image_01.png') }}"
+            alt="Intro Image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Skillset -->
+    <section id="skillset">
+      <div
+        class="container flex flex-col mx-auto item-center space-y-12 mt-10 px-4 md:flex-row space-y-0"
+      >
+        <!-- First item -->
+        <div class="flex flex-col space-y-12 md:w-1/2">
+          <h2 class="max-w-md text-4xl font-bold text-center md:text-left">
+            A little about my skillset
+          </h2>
+          <p class="max-w-sm text-center text-gray-700 md:text-left">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis,
+            in sed hic, aliquid rerum, beatae ipsam molestiae alias consequatur
+            quod suscipit incidunt impedit. Distinctio sit necessitatibus autem,
+            quod magni officia.
+          </p>
+        </div>
+
+        <!-- second item >> Numbered list -->
+        <div class="flex flex-col space-y-8 md:w-1/2">
+          <!-- Item 1 -->
+          <div
+            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+          >
+            <!-- Item heading -->
+            <div class="rounded-l-full bg-slate-500 md:bg-transparent">
+              <div class="flex items-center space-x-2">
+                <div
+                  class="px-4 py-2 text-white rounded-full md:py-1 bg-gray-900"
+                >
+                  01
+                </div>
+                <h3 class="text-white font-bold md:mb-4 md:hidden">
+                  Python Programmer
+                </h3>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg mb-4 font-bold md:block">Python Programmer</h3>
+              <p class="text-gray-700">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quibusdam cumque at soluta velit doloribus numquam vero suscipit
+                adipisci odio facilis?
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div
+            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+          >
+            <!-- Item heading -->
+            <div class="rounded-l-full bg-slate-500 md:bg-transparent">
+              <div class="flex items-center space-x-2">
+                <div
+                  class="px-4 py-2 text-white rounded-full md:py-1 bg-gray-900"
+                >
+                  02
+                </div>
+                <h3 class="text-white font-bold md:mb-4 md:hidden">
+                  Entry level Data Scientist
+                </h3>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg mb-4 font-bold md:block">
+                Entry level Data Scientist
+              </h3>
+              <p class="text-gray-700">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quibusdam cumque at soluta velit doloribus numquam vero suscipit
+                adipisci odio facilis?
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div
+            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+          >
+            <!-- Item heading -->
+            <div class="rounded-l-full bg-slate-500 md:bg-transparent">
+              <div class="flex items-center space-x-2">
+                <div
+                  class="px-4 py-2 text-white rounded-full md:py-1 bg-gray-900"
+                >
+                  03
+                </div>
+                <h3 class="text-white font-bold md:mb-4 md:hidden">
+                  Web Developer
+                </h3>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg mb-4 font-bold md:block">Web Developer</h3>
+              <p class="text-gray-700">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quibusdam cumque at soluta velit doloribus numquam vero suscipit
+                adipisci odio facilis?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="max-w-6xl px-5 mx-auto mt-32 text-center">
+        <!-- header item -->
+        <h2 class="text-4xl text-center font-bold">
+          Projects I have Done
+        </h2>
+        <!-- Projects -->
+        <div class="flex flex-col mt-24 md:flex-row md:space-x-6">
+          <!-- Project 1 -->
+          <div
+            class="max-w-sm my-3 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+          >
+            <a href="#">
+              <img
+                class="rounded-t-lg"
+                src="{{ url_for('static', filename='images/image_04.jpeg') }}"
+                alt=""
+              />
+            </a>
+            <div class="p-5">
+              <a href="#">
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Website With Python Flask & Django
+                </h5>
+              </a>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
+                dignissimos cum doloribus harum necessitatibus beatae sint nam
+                quia aut vero repudiandae, voluptates explicabo impedit a rem
+                incidunt reprehenderit, tempore eaque.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Read more
+                <svg
+                  aria-hidden="true"
+                  class="w-4 h-4 ml-2 -mr-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="max-w-sm my-3 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+          >
+            <a href="#">
+              <img
+                class="rounded-t-lg"
+                src="{{ url_for('static', filename='images/image_03.png') }}"
+                alt=""
+              />
+            </a>
+            <div class="p-5">
+              <a href="#">
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Data Science & Machine Learning
+                </h5>
+              </a>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum
+                vitae sint repellendus, officiis sapiente distinctio temporibus
+                atque ratione quasi quod placeat, sit asperiores quo
+                accusantium, sequi enim eveniet molestiae esse?
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Read more
+                <svg
+                  aria-hidden="true"
+                  class="w-4 h-4 ml-2 -mr-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="max-w-sm my-3 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+          >
+            <a href="#">
+              <img
+                class="rounded-t-lg"
+                src="{{ url_for('static', filename='images/image_05.png') }}"
+                alt=""
+              />
+            </a>
+            <div class="p-5">
+              <a href="#">
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Game Development With Python(Pygame)
+                </h5>
+              </a>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Deleniti provident deserunt soluta ducimus reiciendis? Quis
+                accusantium ex eum tempora nulla ipsam praesentium adipisci
+                excepturi laboriosam illum, voluptatum minima quasi error!
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Read more
+                <svg
+                  aria-hidden="true"
+                  class="w-4 h-4 ml-2 -mr-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="my-16">
+          <a
+            href="#"
+            class="p-3 px-6 pt-2 text-white bg-red-500 rounded-full baseline hover:bg-brightRedLight"
+            >Get In Touch</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA section -->
+    <section id="cta" class="bg-red-500">
+      <!-- Flex container -->
+      <div
+        class="container flex flex-col items center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0"
+      >
+        <!-- Heading -->
+        <h2
+          class="text-5xl font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left"
+        >
+          Get In Contact With Me.
+        </h2>
+        <!-- Button -->
+        <div>
+          <a
+            href="#"
+            class="p-3 px-6 pt-2 text-brightRed bg-white rounded-full shadow-2xl baseline hover:bg-gray-900"
+            >Contact Me</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 pb-8">
+      <!-- Flex container -->
+      <div
+        class="container flex flex-col-reverse justify-between px-10 mx-auto space-y-8 md:flex-row md:space-y-0 pt-16"
+      >
+        <!-- Logo and social links container -->
+        <div
+          class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start"
+        >
+          <div class="mx-auto my-6 text-white text-center md:hidden">
+            Copyright &copy; 2022, All Rights Reserved
+          </div>
+          <!-- Logo -->
+          <div>
+            <img
+              src="{{ url_for('static', filename='images/image_01.png') }}"
+              class="h-8"
+              alt=""
+            />
+          </div>
+          <!-- social links container-->
+          <div class="flex justify-center space-x-4">
+            <!-- Link 1 -->
+            <a href="#">
+              <img
+                src="{{ url_for('static', filename='images/icon-facebook.svg') }}"
+                alt="Facebook icon"
+                class="h-8"
+              /> </a
+            ><!-- Link 2 -->
+            <a href="#">
+              <img
+                src="{{ url_for('static', filename='images/icon-youtube.svg') }}"
+                alt="Facebook icon"
+                class="h-8"
+              /> </a
+            ><!-- Link 3 -->
+            <a href="#">
+              <img
+                src="{{ url_for('static', filename='images/icon-twitter.svg') }}"
+                alt="Facebook icon"
+                class="h-8"
+              /> </a
+            ><!-- Link 4 -->
+            <a href="#">
+              <img
+                src="{{ url_for('static', filename='images/icon-pinterest.svg') }}"
+                alt="Facebook icon"
+                class="h-8"
+              /> </a
+            ><!-- Link 5 -->
+            <a href="#">
+              <img
+                src="{{ url_for('static', filename='images/icon-instagram.svg') }}"
+                alt="Facebook icon"
+                class="h-8"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- List container -->
+        <div class="flex justify-around space-x-32">
+          <div class="flex flex-col text-white space-y-3">
+            <a href="#" class="hover:text-brightRed">Home</a>
+            <a href="#" class="hover:text-brightRed">Pricing</a>
+            <a href="#" class="hover:text-brightRed">Products</a>
+            <a href="#" class="hover:text-brightRed">About</a>
+          </div>
+          <div class="flex flex-col text-white space-y-3">
+            <a href="#" class="hover:text-brightRed">Careers</a>
+            <a href="#" class="hover:text-brightRed">Communities</a>
+            <a href="#" class="hover:text-brightRed">Privary Policy</a>
+          </div>
+        </div>
+        <!-- Input container -->
+        <div class="flex flex-col justify-between">
+          <form action="">
+            <div class="flex space-x-3">
+              <input
+                type="text"
+                class="flex-1 px-4 rounded-full focus:outline-none"
+                placeholder="Updated in your inbox"
+              />
+              <button
+                class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none"
+              >
+                Go
+              </button>
+            </div>
+          </form>
+          <div class="hidden text-white md:block">
+            Copy &copy; 2022, All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>
